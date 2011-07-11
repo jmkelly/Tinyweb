@@ -39,6 +39,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -80,6 +81,7 @@
     <Compile Include="Helpers\FakeApplicationPathProvider.cs" />
     <Compile Include="Helpers\IApplicationPathProvider.cs" />
     <Compile Include="Helpers\RealApplicationPathProvider.cs" />
+    <Compile Include="Helpers\SelectTag.cs" />
     <Compile Include="Helpers\Url.cs" />
     <Compile Include="Init\Route.cs" />
     <Compile Include="Handlers\HandlerResult\FileResult.cs" />
