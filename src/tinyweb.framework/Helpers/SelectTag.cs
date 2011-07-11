@@ -29,10 +29,6 @@ namespace tinyweb.framework.Helpers
             
          }
 
-        public static string BuildOption(string value, string text)
-        {
-            return "<option value='" + value + "'>" + text + "</option>";
-        }
 
     }
 }

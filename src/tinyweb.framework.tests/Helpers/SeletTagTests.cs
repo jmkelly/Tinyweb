@@ -36,9 +36,23 @@ namespace tinyweb.framework.tests
         [Test]
         public void SelectTag_returns_select_html()
         {
+          Assert.AreEqual(Expected(),SelectTag.For<SampleModelHandler>("id","name"));  
+
+        }
+
+        public string Expected()
+        {
             StringBuilder sb = new StringBuilder();
             sb.Append("<select>");
-
+            sb.Append("\n");
+            foreach (SampleModel s in new SampleModelHandler().createDummySampleModels())
+            {
+                sb.Append("\t");
+                sb.Append("<option value='" + s.id.ToString() + "'>" + s.name + "</option>");
+                sb.Append("\n");
+            }
+            sb.Append("</select>");
+            return sb.ToString();
         }
 
 
@@ -59,7 +73,7 @@ namespace tinyweb.framework.tests
             return new JsonResult(createDummySampleModels());
         }
 
-        private List<SampleModel> createDummySampleModels()
+        public List<SampleModel> createDummySampleModels()
         {
             List<SampleModel> sampleModels = new List<SampleModel>();
             for (int i = 0; i < 10; i++)
