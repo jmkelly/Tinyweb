@@ -23,7 +23,7 @@ namespace tinyweb.framework.Helpers
 
            
             IHandlerInvoker hi = HandlerInvoker.Current;
-            return string.Empty;
+           //Need to get the context somehow? the call the handler, returning the result for rendering 
             //ExecutionResult er = hi.Execute(handler, this._requestContext, null);
             //return er.Result.ToString();            
             
